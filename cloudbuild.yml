@@ -1,6 +1,7 @@
 steps:
-- name: 'gcr.io/cloud-builders/gradle'
-  args: ['build -x test']
+- name: 'java:8'
+  entrypoint: "bash"
+  args: [ "-c", "./gradlew build -x test"]
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '--tag=gcr.io/$PROJECT_ID/reactive-backend', '.']
 images: ['gcr.io/$PROJECT_ID/reactive-backend']
