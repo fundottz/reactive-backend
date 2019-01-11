@@ -16,7 +16,6 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
 group = 'com.fundottz'
-version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
@@ -30,6 +29,7 @@ ext {
 
 jar {
 	archiveName = "${rootProject.name}.jar"
+	version = null
 }
 
 dependencies {
