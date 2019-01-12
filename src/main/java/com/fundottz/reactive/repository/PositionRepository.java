@@ -9,6 +9,5 @@ import java.util.Optional;
 public interface PositionRepository extends MongoRepository<Position, String> {
 
     List<Position> findAllBySecurity(String security);
-
     Optional<Position> findBySecurityAndAccount(String security, String account);
 }
